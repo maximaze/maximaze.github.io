@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>가상 디비 모니터링 페이지</title>
+</head>
+<body>
+  <h1>가상 디비 모니터링 페이지</h1>
+
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th>컬럼 1</th>
+        <th>컬럼 2</th>
+        <th>컬럼 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 데이터 행이 여기에 동적으로 추가됩니다. -->
+    </tbody>
+  </table>
+
+  <script>
+    // 데이터를 가져와서 테이블에 동적으로 추가하는 함수
+    function fetchDataAndDisplay() {
+      // 가상 디비에서 데이터 가져오는 로직을 구현해야 합니다.
+      // 이 예제에서는 가상의 데이터를 사용하겠습니다.
+      const data = [
+        { column1: '값 1-1', column2: '값 1-2', column3: '값 1-3' },
+        { column1: '값 2-1', column2: '값 2-2', column3: '값 2-3' },
+        { column1: '값 3-1', column2: '값 3-2', column3: '값 3-3' }
+      ];
+
+      const tableBody = document.querySelector('#data-table tbody');
+
+      // 데이터를 테이블에 동적으로 추가합니다.
+      data.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${item.column1}</td>
+          <td>${item.column2}</td>
+          <td>${item.column3}</td>
+        `;
+        tableBody.appendChild(row);
+      });
+    }
+
+    // 페이지가 로드될 때 데이터를 가져와서 표시합니다.
+    window.addEventListener('load', fetchDataAndDisplay);
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./project-style.css">
+  </head>
+  <body>
+    <header>
+      <a href="./project.html" class="logo">PROJECT</a>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="./index.html">About</a></li>
+          <li><a href="./project.html">Project</a></li>
+        </ul>
+      </nav>
+        <ul>
+        </ul>
+    </header>
+    <section class="porjects">
+      <div class="project">
+        <a
+          class="saeromsoft"
+          target="_blank"
+          href="#"
+        ></a>
+        <span>1. SaeromSoft - 건강검진 프로그램 | Delphi & SQL</span>
+      </div>
+      <div class="project">
+        <a target="_blank" href="#">Coming up!</a>
+      </div>
+      <div class="project">
+        <a target="_blank" href="#">Coming up!</a>
+      </div>
+      <div class="project">
+        <a target="_blank" href="#">Coming up!</a>
+      </div>
+    </section>
+  </body>
+</html>
